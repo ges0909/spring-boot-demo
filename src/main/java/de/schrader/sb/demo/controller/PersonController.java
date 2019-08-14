@@ -1,6 +1,6 @@
-package de.schrader.springbootdemo.controller;
+package de.schrader.sb.demo.controller;
 
-import de.schrader.springbootdemo.dto.Person;
+import de.schrader.sb.demo.dto.Person;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

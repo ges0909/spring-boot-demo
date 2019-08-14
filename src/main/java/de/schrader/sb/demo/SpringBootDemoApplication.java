@@ -1,7 +1,9 @@
-package de.schrader.springbootdemo;
+package de.schrader.sb.demo;
 
-import de.schrader.springbootdemo.service.PersonService;
-import de.schrader.springbootdemo.service.PersonServiceImpl;
+import de.schrader.sb.demo.service.PersonService;
+import de.schrader.sb.demo.service.PersonServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,6 +14,8 @@ import java.util.Arrays;
 
 @SpringBootApplication
 public class SpringBootDemoApplication {
+
+    private static final Logger log = LoggerFactory.getLogger(SpringBootDemoApplication.class);
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootDemoApplication.class, args);
@@ -28,7 +32,7 @@ public class SpringBootDemoApplication {
             String[] beanNames = applicationContext.getBeanDefinitionNames();
             Arrays.sort(beanNames);
             for (String bean : beanNames) {
-                System.out.println(bean);
+                log.info(bean);
             }
         };
     }

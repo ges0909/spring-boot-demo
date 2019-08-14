@@ -1,6 +1,6 @@
-package de.schrader.springbootdemo.service;
+package de.schrader.sb.demo.service;
 
-import de.schrader.springbootdemo.dto.Person;
+import de.schrader.sb.demo.dto.Person;
 
 public class PersonServiceImpl implements PersonService {
 

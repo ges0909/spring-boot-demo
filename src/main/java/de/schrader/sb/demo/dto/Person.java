@@ -1,4 +1,4 @@
-package de.schrader.springbootdemo.dto;
+package de.schrader.sb.demo.dto;
 
 import lombok.Data;
 
