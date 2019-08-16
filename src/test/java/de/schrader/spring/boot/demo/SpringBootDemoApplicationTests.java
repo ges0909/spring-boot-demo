@@ -1,4 +1,4 @@
-package de.schrader.sb.demo;
+package de.schrader.spring.boot.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

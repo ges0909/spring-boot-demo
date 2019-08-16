@@ -1,6 +1,6 @@
-package de.schrader.sb.demo.controller;
+package de.schrader.spring.boot.demo.rest;
 
-import de.schrader.sb.demo.dto.Person;
+import de.schrader.spring.boot.demo.dto.PersonDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,5 +10,6 @@ public interface PersonController {
     @GetMapping("/{name}")
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    Person getPerson(@PathVariable String name);
+    PersonDto getPerson(@PathVariable String name);
+
 }

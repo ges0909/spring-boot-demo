@@ -1,7 +1,8 @@
-package de.schrader.sb.demo.controller;
+package de.schrader.spring.boot.demo.rest;
 
-import de.schrader.sb.demo.service.PersonService;
-import de.schrader.sb.demo.dto.Person;
+import de.schrader.spring.boot.demo.dto.PersonDto;
+import de.schrader.spring.boot.demo.model.Person;
+import de.schrader.spring.boot.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +20,8 @@ public class PersonControllerImpl implements PersonController {
     }
 
     @Override
-    public Person getPerson(@PathVariable String name) {
-        return personService.getPerson(name);
+    public PersonDto getPerson(@PathVariable String name) {
+        Person person = personService.getByName(name);
+        return new PersonDto();
     }
 }
