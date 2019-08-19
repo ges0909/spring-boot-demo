@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
     @Value("${spring.application.name}")
-    String appName;
+    private String applicationName;
 
     @GetMapping("/")
     public String homePage(Model model) {
-        model.addAttribute("appName", appName);
+        model.addAttribute("appName", applicationName);
         return "home";
     }
 }
